@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form id="form-1">
+            <h3 class="form__heading">Sign up</h3>
+
+            <div class="form-group">
+                <label for="username" class="form__label">Username</label>
+                <input type="text" placeholder="User name" id="username" class="form-control">
+                <span class="form-message"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="email" class="form__label">Email</label>
+                <input type="text" placeholder="Email" id="email" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="form__label">Password</label>
+                <input type="password" placeholder="Password" id="password" class="form-control">
+                <span class="form-message"></span>
+            </div>
+    
+            <button>Sign up</button>
+            <div class="social">
+              <div class="go"><i class="fab fa-google"></i>  Google</div>
+              <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+            </div>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+
+    <script>
+
+        Validator({
+            form: '#form-1',
+            rules: [
+                Validator.isRequired('#username'),
+                Validator.isEmail('#email'),
+
+            ]
+        })
+    </script>
+</body>
+</html>

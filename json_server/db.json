@@ -1,0 +1,19 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Kiến thức cơ bản",
+      "description": "Kiến thức cơ bản dành cho người mới"
+    },
+    {
+      "id": 2,
+      "name": "HTML, CSS từ zero đến hero",
+      "description": "Thực hành xây dựng giao diện website"
+    },
+    {
+      "name": "Xây dựng web với NodeJS",
+      "description": "Xây dựng web trong thực tế với NodeJS",
+      "id": 3
+    }
+  ]
+}
